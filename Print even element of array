@@ -1,0 +1,5 @@
+let arr = [4, 5, 7, 8, 14, 45, 76];
+
+let result = arr.filter(element => element % 2 === 0);
+
+console.log(result);
