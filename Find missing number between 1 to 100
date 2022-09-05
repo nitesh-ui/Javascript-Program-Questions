@@ -1,0 +1,20 @@
+//create array till 100
+let arrayOfNumbers = Array.from( Array(101).keys());
+console.log(arrayOfNumbers);
+//remove 0 
+arrayOfNumbers.shift();
+console.log(arrayOfNumbers);
+
+if(arrayOfNumbers.length === 100) {
+  console.log("No Number is missing");
+}
+
+let totalSum  = (100 * (100 + 1)) / 2;
+let sumOfArray = 0;
+
+//sum the total of given array
+for(let i of arrayOfNumbers) {
+  sumOfArray += i;
+}
+
+console.log(totalSum - sumOfArray);
