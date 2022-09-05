@@ -6,4 +6,3 @@ let resultOne = word.split("").reverse().join(" ");
 console.log(resultOne); //yednaP hsetiN
 
 
-https://www.interviewkickstart.com/interview-questions/array-interview-questions#:~:text=Array%20Interview%20Questions%20in%20JavaScript,-Microsoft%2C%20Netflix%2C%20Uber&text=How%20would%20you%20double%20elements,empty%20an%20array%20in%20JavaScript%3F
