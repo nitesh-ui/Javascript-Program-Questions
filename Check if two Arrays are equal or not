@@ -1,0 +1,16 @@
+let arr1 = [3, 5, 2, 5, 2];
+let arr2 = [2, 3, 5, 5, 2];
+
+if(arr1.length !== arr2.length) {
+  console.log("Both arrays are not equal");
+}
+
+arr1.sort(); 
+arr2.sort();
+
+for(let i = 0; i < arr1.length; i++) {
+  if(arr1[i] !== arr2[i]) {
+    console.log("Both arrays are not equal");
+  }
+}
+console.log("Both arrays are equal");
