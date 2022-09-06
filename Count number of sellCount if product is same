@@ -1,0 +1,68 @@
+let salesData = {
+  '6-1-21': [
+    {
+      company: 'ms',
+      product: 'keyboard',
+      sellCount: 12,
+    },
+    {
+      company: 'nike',
+      product: 'f100',
+      sellCount: 17,
+    },
+  ],
+  '7-1-21': [
+    {
+      company: 'ms',
+      product: 'keyboard',
+      sellCount: 10,
+    },
+    {
+      company: 'nike',
+      product: 'f100',
+      sellCount: 81,
+    },
+    {
+      company: 'samsung',
+      product: 'galaxy',
+      sellCount: 54,
+    },
+  ],
+  '8-1-12': [
+    {
+      company: 'iBall',
+      product: 'keyboard',
+      sellCount: 14,
+    },
+    {
+      company: 'samsung',
+      product: 'note2',
+      sellCount: 23,
+    },
+  ],
+};
+
+let mapData = new Map();
+for (let index in salesData) {
+  for(let y in salesData[index]) {
+   let store = salesData[index][y];
+   let keyData = store["company"] + "-" + store["product"];
+   let productCount = mapData.get(keyData);
+   if(productCount === undefined) {
+     productCount = 0;
+   }
+   productCount += store["sellCount"];
+   mapData.set(keyData,productCount);
+  } 
+}
+let obj =[];
+for( const [x, val] of  mapData){
+	let values =x.split("-");
+	var json = {
+		"company":values[0],
+		"product":values[1],
+		"total_sales_count":val
+	};
+	obj.push(json);
+}
+console.log(obj)
