@@ -1,0 +1,13 @@
+var array1 = [4, 8, 10, 9, 5];
+var array2 = [5, 10, 8, 3, 7];
+
+for(var i = 0; i < array1.length; i++) {
+  for(var j = 0; j < array2.length; j++) {
+    if(array1[i] === array2[j]) {
+      console.log(`${array1[i]} found in ${array2[j]}`);
+    }
+  }
+}
+//8 found in 8
+10 found in 10
+5 found in 5
