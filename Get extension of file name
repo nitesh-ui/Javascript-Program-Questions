@@ -1,0 +1,5 @@
+let fileName = 'index.js';
+
+let extension = fileName.split(".").pop();
+
+console.log(fileName); // js
