@@ -1,0 +1,10 @@
+const message = 'Hello';
+
+let strFirst = message.charAt(0);
+let strLast = message.charAt(message.length - 1);
+let middle = message.substring(1, message.length-1);
+
+let result  = strLast + middle + strFirst
+
+console.log(result);
+//oellH
