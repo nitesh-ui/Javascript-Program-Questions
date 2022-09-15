@@ -1,0 +1,9 @@
+function checkStr(str) {
+  if(str.substring(0, 2) === "Ma") {
+    return str;
+  }
+  else {
+    return "Ma" + str;
+  }
+}
+console.log(checkStr("Madhav"));
