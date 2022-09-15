@@ -1,0 +1,9 @@
+let user = "Pralay";
+
+let exc = user.substring(user.length - 3);
+
+let result = exc + user + exc;
+
+console.log(result);
+
+//layPralaylay
