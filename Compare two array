@@ -1,11 +1,14 @@
-var array1 = [4, 8, 10, 9, 5];
-var array2 = [5, 10, 8, 3, 5];
+var array1 = [4, 8, 10, 9, 5, 5];
+var array2 = [5, 10, 8, 3, 5, 5];
+
+array1.sort((a, b) => (a-b));
+array2.sort((a, b) => (a-b));
 
 if(array1.length === array2.length) {
   console.log("Both array are of equal size");
   for(var i = 0; i < array1.length; i++) {
     for(var j = 0; j < array2.length; j++) {
-      if(array1[i] === array2[j]) {
+      if(array1[i] === array2[j] && (array1[i+1] !== array1[i]) && (array2[j+1] !== array2[j])) {
         console.log(`${array1[i]} found in ${array2[j]}`);
       }
     }
