@@ -1,0 +1,9 @@
+let str = "Nitesh";
+let char = "i";
+let result = str.substring(1,4);
+
+for(var i = 0; i < result.length; i++) {
+  result[i] === char ? console.log("Found") : console.log("Not Found");
+}
+
+// Found
