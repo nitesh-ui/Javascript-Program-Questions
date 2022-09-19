@@ -5,4 +5,9 @@ console.log(result); //Pandey Nitesh
 let resultOne = word.split("").reverse().join(" ");
 console.log(resultOne); //yednaP hsetiN
 
-
+var message = 'Hello world';
+var result = "";
+for(var i = message.length-1;i >= 0;i--){
+  result += message[i];
+}
+console.log(result); //dlrow olleH
