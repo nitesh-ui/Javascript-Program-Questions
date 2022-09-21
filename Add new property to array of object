@@ -1,0 +1,10 @@
+var array = [ {'a': '12', 'b':'10'}, {'a': '20', 'b':'22'} ];
+
+var result = array.map( x => {
+  x.c = 'Nitesh';
+  return x;
+})
+
+console.log(result);
+//
+{a: "12", b: "10", c: "Nitesh"}{a: "20", b: "22", c: "Nitesh"}
