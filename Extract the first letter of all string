@@ -1,0 +1,6 @@
+let str = "geeks for geeks";
+let splitted = str.split(" ");
+for(i = 0; i < splitted.length; i++) {
+  console.log(splitted[i].charAt(0));
+}
+// gfg
