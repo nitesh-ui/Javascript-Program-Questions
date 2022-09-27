@@ -1,0 +1,11 @@
+let str = "nitesh";
+let str1 = "pandey";
+
+function replaceAll(string, search, replace) {
+  return string.split(search).join(replace);
+}
+
+for(let i = 0; i < str1.length; i++) {
+  str = replaceAll(str, str1[i], "");
+}
+console.log(str);
