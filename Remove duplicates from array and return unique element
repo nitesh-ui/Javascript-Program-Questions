@@ -1,3 +1,15 @@
 var array = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
+
+//1st way
 var newArr = Array.from(new Set(array));
 console.log(newArr); //[1, 2, 3, 5, 9, 8]
+
+//2nd way
+let strings = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+let original = []
+for(let str of strings) {
+  if(!original.includes(str)) {
+    original.push(str);
+  }
+}
+console.log(original); // ["Hare", "Krishna", ":-O"]
