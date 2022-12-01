@@ -1,0 +1,9 @@
+let user = [name: "Nitesh", age: 28, stream: "IT"];
+let objValues = [28, "IT"];
+let result = {};
+objValues.forEach(item => {
+  result[Object.keys(user).find(key => user[key] === item)] = item
+)};
+console.log(result);
+
+// {age: 28, stream: "IT"}
