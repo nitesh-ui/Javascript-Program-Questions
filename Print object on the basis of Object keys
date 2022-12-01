@@ -1,0 +1,7 @@
+let user = {name: "Nitesh", age: 28, stream: "IT"};
+let objKeys = ["name", "age"];
+let result = {};
+objKeys.forEach(item => result[item] = user[item]);
+console.log(result);
+
+// {name: "Nitesh", age: 28}
