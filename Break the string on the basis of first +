@@ -1,0 +1,11 @@
+const message = 'MoneyGuidePro + Yodlee + MyBlocks';
+let splitData = message.split(' + ');
+console.log(splitData[0]);
+if(splitData.length > 1) {
+  let ans = splitData.slice(1).join(' + ');
+  console.log('+ ' + ans);
+}
+
+// Output
+MoneyGuidePro
++ Yodlee + MyBlocks
