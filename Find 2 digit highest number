@@ -1,0 +1,8 @@
+let str = "358476";
+let arr = [];
+for(i=0; i < str.length-1;i++) {
+  let res = str.slice(i, i+2);
+  arr.push(res);
+  arr.sort();
+}
+console.log(arr[arr.length-1]); // 84
