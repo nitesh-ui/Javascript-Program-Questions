@@ -1,0 +1,35 @@
+// We will use recursion here
+function displayNestedObjectValues(obj) {
+  for (const key in obj) {
+    if (typeof obj[key] === 'object' && obj[key] !== null) {
+      displayNestedObjectValues(obj[key]);
+    } else {
+      console.log(obj[key]);
+    }
+  }
+}
+
+const nestedObject = {
+  name: "Nitesh",
+  details: {
+    age: 28,
+    address: {
+      pincode: 221405,
+      street: "Varanasi",
+      area: {
+        village: "Chaukhandi"
+      }
+    }
+  },
+  qualification: "B.Tech"
+};
+
+displayNestedObjectValues(nestedObject);
+
+Output:- 
+Nitesh
+28
+221405
+Varanasi
+Chaukhandi
+B.Tech
