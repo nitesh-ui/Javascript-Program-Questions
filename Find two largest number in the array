@@ -1,0 +1,17 @@
+const input = [1,9,6,5,14,3]
+let temp1
+let temp2
+ 
+for(let i =0; i < input.length; i++) {
+    if(!temp1 && !temp2) {
+        temp1 = input[i]
+        temp2 = input[i] 
+    } else {
+        if(temp1 < input[i]) {
+            temp2 = temp1
+            temp1 = input[i]
+        }
+    }
+}
+ 
+console.log(temp1, temp2)
