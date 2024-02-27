@@ -1,4 +1,4 @@
-let user = [name: "Nitesh", age: 28, stream: "IT"];
+let user = {name: "Nitesh", age: 28, stream: "IT"};
 let objValues = [28, "IT"];
 let result = {};
 objValues.forEach(item => {
