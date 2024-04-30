@@ -1,0 +1,22 @@
+let arr = ["Iraq","India","Africa","Japan","United States","united kingdom","Mexico","Russia"]
+
+arr.sort((a,b) => a.length-b.length)
+
+let temp =[]
+let count  = arr[0].length;
+
+for(let item of arr){
+    if(count === item.length){
+        temp = [...temp,item]
+    } else {
+        console.log(temp)
+        temp = [item]
+        count = item.length
+    }
+}
+console.log(temp);
+[ 'Iraq' ]
+[ 'India', 'Japan' ]
+[ 'Africa', 'Mexico', 'Russia' ]
+[ 'United States' ]
+[ 'united kingdom' ]
