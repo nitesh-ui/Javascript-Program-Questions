@@ -5,6 +5,8 @@ const company = {
     internals: [{name: 'Jack', salary: 1300}]
   }
 };
+
+Approach 1:-
 const sumSalaries = (department) => {
 	if(Array.isArray(department)) {
   	return department.reduce((totalSal,sal) => totalSal + sal.salary,0)
@@ -18,3 +20,27 @@ const sumSalaries = (department) => {
 }
  
 console.log(sumSalaries(company)); //7700
+
+
+Aprroach 2:-
+//First list all the values in an array
+const getValues = (obj) => {
+    const items = [];
+    for(let key in obj) {
+        if (typeof obj[key] === 'object') {
+            items.push(...getValues(obj[key]))
+        } else {
+            items.push(obj[key])
+        }
+    }
+    return items;
+}
+const objItems = getValues(company);
+//Now calculate the sum of numbers in array
+let sum = 0;
+for(let i = 0; i < objItems.length; i++) {
+    if(typeof objItems[i] === 'number') {
+        sum += objItems[i]
+    }
+}
+console.log(sum); //7700
