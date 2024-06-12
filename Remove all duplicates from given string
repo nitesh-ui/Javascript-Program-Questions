@@ -1,0 +1,11 @@
+function removeDuplicates(inputStr) {
+    let seen = new Set();
+    let result = '';
+    for (let char of inputStr) {
+        if (!seen.has(char)) {
+            result += char;
+            seen.add(char);
+        }
+    }
+    return result;
+}
