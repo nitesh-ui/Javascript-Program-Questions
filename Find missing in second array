@@ -1,0 +1,13 @@
+let a = [1, 2, 3, 4, 5];
+let b = [2, 4, 6];
+
+let missingNumber = [];
+        
+let bSet = new Set(b);
+        
+for(let num of a) {
+  if(!bSet.has(num)) {
+    missingNumber.push(num);
+  }
+}
+console.log(missingNumber);
