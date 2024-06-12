@@ -1,0 +1,17 @@
+function nonrepeatChar(s)
+    {
+        let charFreq = {};
+        
+        for(let char of s) {
+            charFreq[char] = (charFreq[char] || 0) + 1;
+        }
+        
+        for(let char of s) {
+            if(charFreq[char] === 1) {
+                return char;
+            }
+        }
+        
+        return '$';
+    }
+console.log(nonrepeatChar("hello"));
