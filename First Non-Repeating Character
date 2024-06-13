@@ -1,17 +1,27 @@
 function nonrepeatChar(s)
     {
         let charFreq = {};
-        
         for(let char of s) {
             charFreq[char] = (charFreq[char] || 0) + 1;
         }
-        
         for(let char of s) {
             if(charFreq[char] === 1) {
                 return char;
             }
         }
-        
         return '$';
     }
 console.log(nonrepeatChar("hello"));
+
+
+
+
+//2nd approach
+let name = "kkaran";
+let name1 = name.split("");
+for(let i = 0 ; i < name1.length ; i++){
+    if(name1.indexOf(name[i])===name1.lastIndexOf(name[i])){
+        console.log(name[i]);
+        break;
+    }
+}
