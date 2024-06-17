@@ -1,0 +1,14 @@
+let a = [10, 5, 2, 23, 19];
+let b = [19, 5, 3];
+const map1 = new Map();
+for(let i = 0; i < a.length; i++) {
+  if(!map1.has(a[i])) {
+    map1.set(a[i]);
+  }
+}
+for(let i = 0; i < b.length; i++) {
+  if(!map1.has(b[i])) {
+    console.log(false)
+  }
+}
+console.log(true);
