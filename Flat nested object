@@ -1,0 +1,36 @@
+const nestedObject = {
+    a: 1,
+    b: {
+        c: 2,
+        d: {
+            e: 3,
+            f: {
+                g: 4
+            }
+        }
+    },
+    h: {
+        i: 5
+    }
+};
+
+function flattenObject(obj, prefix = '') {
+    let flattened = {};
+
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            let prefixedKey = prefix ? `${prefix}.${key}` : key;
+
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+                Object.assign(flattened, flattenObject(obj[key], prefixedKey));
+            } else {
+                flattened[prefixedKey] = obj[key];
+            }
+        }
+    }
+
+    return flattened;
+}
+
+const flattenedObject = flattenObject(nestedObject);
+console.log(flattenedObject); //{ a: 1, 'b.c': 2, 'b.d.e': 3, 'b.d.f.g': 4, 'h.i': 5 }
