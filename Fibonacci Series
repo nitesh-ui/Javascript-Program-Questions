@@ -1,0 +1,10 @@
+let number = 10;
+let prev = 0;
+let next = 1;
+let nextTerm;
+for(let i = 0; i < number; i++) {
+    nextTerm = prev + next;
+    prev = next;
+    next = nextTerm;
+    console.log(nextTerm)
+}
