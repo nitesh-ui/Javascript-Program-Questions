@@ -1,0 +1,6 @@
+let number = 5;
+let next = 1;
+for(let i = 1; i <= number; i++) {
+    next *= i;
+}
+console.log(next)
